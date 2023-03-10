@@ -1,4 +1,4 @@
-# 백준 1541 - 잃어버린 괄호
+# 백준 16637번 - 괄호 추가하기
 
 n = int(input())
 splitMul = input().split('*')
