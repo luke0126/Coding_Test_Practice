@@ -69,4 +69,3 @@ print(answer)
 #                 answer = answer * int(i[0])
 #             else:
 #                 answer = answer * int(i[0])
-#                 answer = answer - int(i[1])
