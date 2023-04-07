@@ -85,7 +85,7 @@ def dfs(graph, cnt):
         return
 
     for i in directions:
-        temp_board = move(deepcopy(graph), i) # 유의! shallow copy를 하면 서로 다른 부모를 가진 노드들이 서로에게 영향을 미치게 되기에 깊은 복사로 이러한 일을 방지한다.
+        temp_board = move(deepcopy(graph), i) # 유의! 얕은 복사를 하면 서로 다른 부모를 가진 노드들이 서로에게 영향을 미치게 되기에 깊은 복사로 이러한 일을 방지한다.
         dfs(temp_board, cnt + 1)
 
 
