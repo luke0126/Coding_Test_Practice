@@ -5,7 +5,6 @@ n, m = map(int, input().split())
 nums = list(set(map(int, input().split())))
 nums.sort()
 result = []
-visited = [False] * (len(nums) + 1)
 
 
 def dfs(num):
