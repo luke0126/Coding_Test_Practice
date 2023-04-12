@@ -4,24 +4,26 @@
 # 최단 경로를 찾는 것이므로 bfs로 풀이!
 
 from collections import deque
+import sys
+input = sys.stdin.readline
 
 n, k = map(int, input().split())
 
+pos = [-1] * 100001
+pos[n] = 0
 queue = deque()
 queue.append(n)
-pos = [0] * 100001
-pos[n] = 1
 
 while queue:
     now = queue.popleft()
     if now == k:
-        print(pos[k] - 1)
+        print(pos[k])
         break
-    for next in (now * 2, now + 1, now - 1):
-        if 0 <= next < 100001 and pos[next] == 0:
-            if next == now * 2: # 순간이동
-                pos[next] = pos[now] # 순간이동하면 시간 증가 안 함
-                queue.append(next)
+    for nxt in (now + 1, now - 1, now * 2):
+        if 0 <= nxt < 100001 and pos[nxt] == -1:
+            if nxt == now * 2: # 순간이동
+                pos[nxt] = pos[now] # 순간이동하면 시간 증가 안 함
+                queue.appendleft(nxt)
             else: # 앞, 뒤 이동
-                pos[next] = pos[now] + 1 # 시간 1초 증가
-                queue.append(next)
+                pos[nxt] = pos[now] + 1  # 시간 1초 증가
+                queue.append(nxt)
