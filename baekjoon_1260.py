@@ -3,7 +3,6 @@
 from collections import deque
 
 n, m, v = map(int, input().split())
-
 graph = [[0] * (n + 1) for _ in range(n + 1)]  # 각 정점에 대해 나타내기 위한 초기화 (n+1)을 곱한 이유는 index를 좀 더 편하게 보기 위해서이다.
 dfs_visited = [False] * (n + 1)
 bfs_visited = [False] * (n + 1)
