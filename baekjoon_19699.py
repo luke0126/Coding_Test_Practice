@@ -27,4 +27,3 @@ if answer:
     print(' '.join(map(str, answer)))
 else:
     print('-1')
-
