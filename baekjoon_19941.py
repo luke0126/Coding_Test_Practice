@@ -13,6 +13,7 @@ for i in range(len(arr)):
             if 0 <= j < n:
                 # 햄버거라면
                 if arr[j] == 'H':
+                    # 햄버거를 먹었으니 x로 나타내어준다
                     arr[j] = 'X'
                     answer += 1
                     break
