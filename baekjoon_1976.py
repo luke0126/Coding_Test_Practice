@@ -1,5 +1,7 @@
 # 백준 1976번 - 여행 가자
 
+# Union Find 알고리즘 이용!
+
 def find(x):
     if x == parent[x]:
         return x
